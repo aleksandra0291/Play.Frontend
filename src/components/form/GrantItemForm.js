@@ -85,16 +85,16 @@ export default class GrantItemForm extends React.Component
     {
         return <Form noValidate validated={this.state.validated} onSubmit={this.submitGrant}>
             <Form.Group>
-                <Form.Label htmlFor="userId">User Id:</Form.Label>
+                <Form.Label htmlFor="userId">ID użytkownika</Form.Label>
                 <Form.Control type="text" name="userId" onChange={this.onChange} value={this.state.userId} required />
-                <Form.Control.Feedback type="invalid">The User Id field is required</Form.Control.Feedback>
+                <Form.Control.Feedback type="invalid">ID użytkownika jest wymagane</Form.Control.Feedback>
             </Form.Group>
             <Form.Group>
-                <Form.Label htmlFor="quantity">Quantity:</Form.Label>
+                <Form.Label htmlFor="quantity">Ilość:</Form.Label>
                 <Form.Control type="number" name="quantity" onChange={this.onChange} value={this.state.quantity} required />
-                <Form.Control.Feedback type="invalid">The Quantity field is required</Form.Control.Feedback>
+                <Form.Control.Feedback type="invalid">Ilość jest wymagana</Form.Control.Feedback>
             </Form.Group>
-            <Button variant="primary" type="submit">Grant</Button>
+            <Button variant="primary" type="submit">Przyznaj</Button>
 
             <Alert style={{ marginTop: "10px" }} variant={this.state.alertColor} show={this.state.alertVisible}>
                 {this.state.alertMessage}

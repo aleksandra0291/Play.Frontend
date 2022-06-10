@@ -20,10 +20,10 @@ export class Catalog extends Component
 
   async populateItems()
   {
-    fetch(`${window.CATALOG_ITEMS_API_URL}`)
+    fetch(`${window.CATALOG_ITEMS_API_URL}`) // talking to url of the catalog apis//
       .then(response =>
       {
-        return response.json();
+        return response.json(); //tu dostaajemy odpowiedz//
       })
       .then(returnedItems => this.setState({ items: returnedItems, loading: false, loadedSuccess: true }))
       .catch(err =>

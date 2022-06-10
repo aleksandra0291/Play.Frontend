@@ -19,11 +19,11 @@ export default class ItemModal extends Component {
             button = <Button
                 variant="primary"
                 onClick={this.toggle}
-                style={{ minWidth: "200px" }}>Add</Button>;
+                style={{ minWidth: "200px" }}>Dodaj</Button>;
         } else {
             button = <Button
                 variant="primary"
-                onClick={this.toggle}>Edit</Button>;
+                onClick={this.toggle}>Edytuj</Button>;
         }
         return <Fragment>
             {button}

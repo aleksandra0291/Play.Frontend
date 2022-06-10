@@ -139,20 +139,20 @@ export default class ItemForm extends React.Component
     {
         return <Form noValidate validated={this.state.validated} onSubmit={this.props.item ? this.submitEdit : this.submitNew}>
             <Form.Group>
-                <Form.Label htmlFor="name">Name:</Form.Label>
+                <Form.Label htmlFor="name">Nazwa:</Form.Label>
                 <Form.Control type="text" name="name" onChange={this.onChange} value={this.state.name} required />
-                <Form.Control.Feedback type="invalid">The Name field is required</Form.Control.Feedback>
+                <Form.Control.Feedback type="invalid">Nazwa jest wymagana</Form.Control.Feedback>
             </Form.Group>
             <Form.Group>
-                <Form.Label htmlFor="description">Description:</Form.Label>
+                <Form.Label htmlFor="description">Opis:</Form.Label>
                 <Form.Control type="text" name="description" onChange={this.onChange} value={this.state.description} />
             </Form.Group>
             <Form.Group>
                 <Form.Label htmlFor="price">Price:</Form.Label>
                 <Form.Control type="number" name="price" onChange={this.onChange} value={this.state.price} required />
-                <Form.Control.Feedback type="invalid">The Price field is required</Form.Control.Feedback>
+                <Form.Control.Feedback type="invalid">Cena jest wymagana</Form.Control.Feedback>
             </Form.Group>
-            <Button variant="primary" type="submit">Save</Button>
+            <Button variant="primary" type="submit">Zapisz</Button>
 
             <Alert style={{ marginTop: "10px" }} variant={this.state.alertColor} show={this.state.alertVisible}>
                 {this.state.alertMessage}

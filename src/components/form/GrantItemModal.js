@@ -17,7 +17,7 @@ export default class GrantItemModal extends Component
         return <Fragment>
             <Button variant="primary" onClick={this.toggle}>Grant</Button>
             <Modal show={this.state.modal} className={this.props.className} onHide={this.toggle}>
-                <Modal.Header closeButton>Grant {this.props.item.name}</Modal.Header>
+                <Modal.Header closeButton> Przyznaj {this.props.item.name}</Modal.Header>
                 <Modal.Body>
                     <GrantItemForm
                         toggle={this.toggle}
